@@ -28,7 +28,7 @@ const BookingsPage: React.FC = () => {
 
     const fetchBookings = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/bookings', {
+        const response = await fetch('https://car-service-1aoh.onrender.com/api/bookings', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

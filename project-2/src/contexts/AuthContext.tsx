@@ -29,7 +29,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, []);
 
   const login = async (email: string, password: string, role: string = 'customer') => {
-    const response = await fetch('http://localhost:5000/api/login', {
+    const response = await fetch('https://car-service-1aoh.onrender.com/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -56,7 +56,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const signup = async (userData: Omit<User, 'id'> & { password: string }) => {
-    const response = await fetch('http://localhost:5000/api/register', {
+    const response = await fetch('https://car-service-1aoh.onrender.com/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
